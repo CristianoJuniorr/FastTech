@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+}
+
+.header p {
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+/* PRODUTOS */
+.products {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  color: #0d6efd;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.3rem;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.card button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.card button:hover {
+  background: #084298;
+}
+
+/* SOBRE */
+.about {
+  padding: 60px 20px;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.about h2 {
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
