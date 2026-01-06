@@ -1,16 +1,18 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ================= BASE ================= */
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffffff;
   color: #333;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header {
   background: #0d6efd;
   color: white;
@@ -32,7 +34,86 @@ body {
   font-weight: 300;
 }
 
-/* PRODUTOS */
+/* ================= BANNER SLIDER ================= */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+/* ================= BANNERS ================= */
+.banner {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  /* 🔥 ESSENCIAL: libera clique para os botões */
+  pointer-events: none;
+}
+
+.banner.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* ================= IMAGENS DESKTOP ================= */
+.banner:nth-of-type(1) {
+  background-image: url("../imagens/Banner.png");
+}
+
+.banner:nth-of-type(2) {
+  background-image: url("../imagens/Banner 02.png");
+}
+
+/* ================= BOTÕES DE CONTROLE ================= */
+.banner-prev,
+.banner-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: rgba(151, 151, 151, 0.15); 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  width: 18px;          /* 🔥 força círculo perfeito */
+  height: 18px;
+  border-radius: 50%;   /* 🔥 totalmente redondo */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 2px;
+
+  z-index: 10; /* 🔥 acima do banner */
+}
+
+.banner-prev {
+  left: 20px;
+  transform: translateY(-50%) translateX(-1px); /* 🔥 puxa pra dentro */
+}
+
+.banner-next {
+  right: 20px;
+  transform: translateY(-50%) translateX(1px); /* 🔥 puxa pra dentro */
+}
+
+.banner-prev:hover,
+.banner-next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* ================= PRODUTOS ================= */
 .products {
   padding: 60px 20px;
   text-align: center;
@@ -55,6 +136,13 @@ body {
   padding: 25px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .card h3 {
@@ -81,7 +169,7 @@ body {
   background: #084298;
 }
 
-/* SOBRE */
+/* ================= SOBRE ================= */
 .about {
   padding: 60px 20px;
   background: #f1f1f1;
@@ -99,7 +187,7 @@ body {
   line-height: 1.6;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   background: #0d6efd;
   color: white;
@@ -107,9 +195,31 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
 }
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: 15px;
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  .banner-slider {
+    height: 260px;
+  }
+
+  .banner {
+    background-size: contain;
+    background-position: center;
+  }
+
+  .banner:nth-of-type(1) {
+    background-image: url("../imagens/Banner-mobile.png");
+  }
+
+  .banner:nth-of-type(2) {
+    background-image: url("../imagens/Banner-mobile 02.png");
+  }
+
+  .banner-prev,
+  .banner-next {
+    width: 18px;
+    height: 18px;
+    font-size: 1.3rem;
+    padding-bottom: 0; /* mobile já estava certo */
+  }
 }
