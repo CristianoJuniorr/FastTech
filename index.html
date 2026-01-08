@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- ================= META ================= -->
   <meta charset="UTF-8">
   <title>Fast Tech | Tecnologia rápida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ================= FONTE ================= -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- ================= CSS ================= -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,20 +13,34 @@
 
 <!-- ================= HEADER ================= -->
 <header class="header">
-  <img src="imagens/logo.png" alt="Fast Tech Logo">
-  <h1>Fast Tech</h1>
-  <p>Tecnologia rápida, soluções inteligentes</p>
+  <div class="header-container">
+
+    <!-- LOGO -->
+    <div class="header-logo">
+      <img src="imagens/logo.png" alt="Fast Tech Logo">
+      <div class="logo-text">
+        <h1>Fast Tech</h1>
+        <p>Tecnologia rápida</p>
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="header-search">
+      <input type="text" placeholder="O que você procura hoje?">
+    </div>
+
+  </div>
 </header>
 
 <!-- ================= BANNER SLIDER ================= -->
 <section class="banner-slider">
 
-  <button class="banner-prev" &#10094="Banner anterior">‹</button>
+  <button class="banner-prev">‹</button>
 
   <div class="banner active"></div>
   <div class="banner"></div>
 
-  <button class="banner-next" &#10095="Próximo banner">›</button>
+  <button class="banner-next">›</button>
 
 </section>
 
@@ -79,17 +89,14 @@
   </div>
 </section>
 
-<!-- ================= SOBRE ================= -->
 <section class="about">
   <h2>Quem somos</h2>
   <p>
     A Fast Tech nasceu para oferecer soluções tecnológicas rápidas,
-    acessíveis e de confiança. Trabalhamos com produtos essenciais
-    para facilitar o seu dia a dia.
+    acessíveis e de confiança.
   </p>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 - Fast Tech</p>
 </footer>
